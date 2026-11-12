@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <style>
+      .blue { fill: #3244DC; }
+    </style>
+  </defs>
+
+  <!-- Speech bubble tail at bottom-left -->
+  <path class="blue" d="M 180 760 L 120 900 L 240 820 Z"/>
+
+  <!-- Main head: wide rounded oval (speech-bubble shape) -->
+  <rect class="blue" x="120" y="180" width="784" height="600" rx="280" ry="260"/>
+
+  <!-- Headphone ear cups: left and right -->
+  <rect class="blue" x="60" y="420" width="80" height="120" rx="20" ry="20"/>
+  <rect class="blue" x="884" y="420" width="80" height="120" rx="20" ry="20"/>
+
+  <!-- Antennas rising above each ear cup -->
+  <rect class="blue" x="78" y="240" width="44" height="120" rx="22" ry="22"/>
+  <rect class="blue" x="902" y="240" width="44" height="120" rx="22" ry="22"/>
+
+  <!-- Face panel: large white rounded rectangle -->
+  <rect x="220" y="290" width="584" height="400" rx="120" ry="120" fill="#FFFFFF"/>
+
+  <!-- Two closed smiling arc eyes -->
+  <path class="blue" d="M 320 430 Q 370 390 420 430"/>
+  <path class="blue" d="M 604 430 Q 654 390 704 430"/>
+
+  <!-- Small smile -->
+  <path class="blue" d="M 470 560 Q 512 600 554 560"/>
+</svg>

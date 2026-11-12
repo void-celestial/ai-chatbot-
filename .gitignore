@@ -1,0 +1,78 @@
+# Local data and secrets
+.env
+*.db
+*.db-wal
+*.db-shm
+*.sqlite3
+
+# Exports / backups / logs
+exports/
+backups/
+*.log
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node / frontend
+node_modules/
+frontend/dist/
+dist/
+*.local
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# ---------------------------------------------------------------------------
+# Repository preparation (first GitHub upload)
+# Kept on disk, never published.
+# ---------------------------------------------------------------------------
+
+# Stage 3 rollback backups (files preserved locally, excluded from the repo)
+_stage3_backup/
+
+# Packaging output and compiled binaries / installers
+build/
+*.exe
+*.pkg
+*.msi
+*.dll
+
+# Ad-hoc developer scratch: desktop smoke-test builds
+_desktop_test*/
+_desktop_final/
+
+# One-off debug script (writes backend/app.log); not part of the app or test suite
+backend/test_log.py
+
+# Stray empty Git repository left in the working tree
+ai-chatbot-/
+
+# ---------------------------------------------------------------------------
+# Selective inclusions (negations must come after the excludes above)
+# ---------------------------------------------------------------------------
+
+# Local user data: DB, voice notes, whisper model, acceptance recordings, backups.
+# Everything is excluded; the reusable test scripts below are the only exceptions.
+data/*
+!data/acceptance/
+data/acceptance/*
+!data/acceptance/acceptance_run.py
+!data/acceptance/wer.py
+!data/acceptance/fetch_audio.py
+!data/acceptance/engine_timing.py
+!data/acceptance/netwatch.ps1
+
+# Benchmark scripts are kept; their databases, JSON results and logs are not.
+_bench/*
+!_bench/*.py
